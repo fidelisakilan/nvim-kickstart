@@ -42,7 +42,7 @@ require('lazy').setup({
 
       -- Useful status updates for LSP
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-      { 'j-hui/fidget.nvim', opts = {} },
+      { 'j-hui/fidget.nvim',       opts = {} },
 
       -- Additional lua configuration, makes nvim stuff amazing!
       'folke/neodev.nvim',
@@ -67,7 +67,7 @@ require('lazy').setup({
   },
 
   -- Useful plugin to show you pending keybinds.
-  { 'folke/which-key.nvim', opts = {} },
+  { 'folke/which-key.nvim',  opts = {} },
   {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
@@ -207,11 +207,11 @@ require('lazy').setup({
     },
     build = ':TSUpdate',
   },
-  {"theprimeagen/harpoon"},
-  {"mbbill/undotree"},
+  { "theprimeagen/harpoon" },
+  { "mbbill/undotree" },
   {
     "kdheepak/lazygit.nvim",
-    dependencies =  {
+    dependencies = {
       "nvim-telescope/telescope.nvim",
       "nvim-lua/plenary.nvim"
     },
@@ -219,5 +219,13 @@ require('lazy').setup({
       require("telescope").load_extension("lazygit")
     end,
   },
+  {
+    'akinsho/flutter-tools.nvim',
+    lazy = false,
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'stevearc/dressing.nvim',   -- optional for vim.ui.select
+    },
+    config = true,
+  }
 })
-
