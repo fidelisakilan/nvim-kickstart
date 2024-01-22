@@ -18,6 +18,7 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
+vim.o.wrap = false
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
