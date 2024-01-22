@@ -1,4 +1,3 @@
-
 -- [[ Configure LSP ]]
 --  This function gets run when an LSP connects to a particular buffer.
 local on_attach = function(_, bufnr)
@@ -170,3 +169,12 @@ cmp.setup {
   },
 }
 
+
+-- setup flutter lsp
+require('flutter-tools').setup {
+  lsp = {
+    on_attach = on_attach
+  }
+}
+
+require("telescope").load_extension("flutter")

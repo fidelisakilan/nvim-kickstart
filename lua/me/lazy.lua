@@ -219,24 +219,10 @@ require('lazy').setup({
       require("telescope").load_extension("lazygit")
     end,
   },
+ -- flutter related plugins
   {
-    'akinsho/flutter-tools.nvim',
+    "akinsho/flutter-tools.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "stevearc/dressing.nvim" },
     lazy = false,
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-      'stevearc/dressing.nvim', -- optional for vim.ui.select
-    },
-    config = true,
   },
-  {
-    "nvim-tree/nvim-tree.lua",
-    version = "*",
-    lazy = false,
-    dependencies = {
-      "nvim-tree/nvim-web-devicons",
-    },
-    config = function()
-      require("nvim-tree").setup {}
-    end,
-  }
 })

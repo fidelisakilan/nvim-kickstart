@@ -1,6 +1,6 @@
-require("fidelisakilan.set")
-require("fidelisakilan.remap")
-require("fidelisakilan.lazy")
+require("me.set")
+require("me.remap")
+require("me.lazy")
 
 
 -- The line beneath this is called `modeline`. See `:help modeline`
