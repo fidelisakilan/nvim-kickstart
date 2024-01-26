@@ -169,11 +169,31 @@ cmp.setup {
   },
 }
 
-
 -- setup flutter lsp
-require('flutter-tools').setup {
+require("flutter-tools").setup {
+  ui = {
+    border = "rounded",
+    notification_style = 'plugin'
+  },
+  decorations = {
+    statusline = {
+      app_version = true,
+      device = true,
+      project_config = true,
+    }
+  },
+  root_patterns = { ".git", "pubspec.yaml" },
+  fvm = true,
   lsp = {
-    on_attach = on_attach
+    on_attach = on_attach,
+    color = { enabled = false},
+    settings = {
+      showTodos = true,
+      completeFunctionCalls = true,
+      renameFilesWithClasses = "prompt",
+      enableSnippets = true,
+      updateImportsOnRename = true,
+    }
   }
 }
 
