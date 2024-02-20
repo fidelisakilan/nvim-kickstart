@@ -171,10 +171,6 @@ cmp.setup {
 
 -- setup flutter lsp
 require("flutter-tools").setup {
-  ui = {
-    border = "rounded",
-    notification_style = 'plugin'
-  },
   decorations = {
     statusline = {
       app_version = true,
