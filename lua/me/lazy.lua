@@ -260,5 +260,8 @@ require('lazy').setup({
         end,
       },
     },
-  }
+  },
+  {
+    "sindrets/diffview.nvim",
+  },
 })
