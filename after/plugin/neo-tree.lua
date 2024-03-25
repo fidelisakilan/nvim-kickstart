@@ -10,8 +10,8 @@ vim.fn.sign_define("DiagnosticSignInfo",
 vim.fn.sign_define("DiagnosticSignHint",
   { text = "󰌵", texthl = "DiagnosticSignHint" })
 
-vim.keymap.set('n', '<leader>b', '<Cmd>Neotree toggle<CR>')
-vim.keymap.set('n', '<leader>gn', '<Cmd>Neotree float git_status<CR>')
+vim.keymap.set('n', '<leader>e', '<Cmd>Neotree toggle<CR>')
+vim.keymap.set('n', '<leader>ge', '<Cmd>Neotree float git_status<CR>')
 
 require("neo-tree").setup({
   close_if_last_window = true,
