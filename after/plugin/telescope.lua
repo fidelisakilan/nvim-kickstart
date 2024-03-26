@@ -2,8 +2,8 @@
 -- See `:help telescope` and `:help telescope.setup()`
 require('telescope').setup {
   defaults = {
-    layout_strategy = "horizontal",
-    layout_config = { height = 0.95 },
+    layout_strategy = "vertical",
+    sorting_strategy = "ascending",
     mappings = {
       i = {
         ['<C-u>'] = false,
