@@ -1,3 +1,9 @@
-vim.keymap.set('n', '<leader>mc', require('telescope').extensions.flutter.commands, { desc = '[F]lutter [C]ommands' })
-vim.keymap.set('n', '<leader>mr', vim.cmd.FlutterRun, { desc = '[F]lutter [R]un' })
-vim.keymap.set('n', '<leader>mv', require('telescope').extensions.flutter.fvm, { desc = '[F]lutter [V]ersion Manager' })
+vim.keymap.set('n', '<leader>mc', require('telescope').extensions.flutter.commands, { desc = 'Flutter Commands' })
+vim.keymap.set('n', '<leader>md', vim.cmd.FlutterRun, { desc = 'Flutter Run' })
+vim.keymap.set('n', '<leader>mr', vim.cmd.FlutterReload, { desc = 'Flutter Reload' })
+vim.keymap.set('n', '<leader>mR', vim.cmd.FlutterRestart, { desc = 'Flutter Restart' })
+vim.keymap.set('n', '<leader>mq', vim.cmd.FlutterQuit, { desc = 'Flutter Quit' })
+vim.keymap.set('n', '<leader>mo', vim.cmd.FlutterQuit, { desc = 'Flutter Rename' })
+vim.keymap.set('n', '<leader>mt', vim.cmd.FlutterOutlineToggle, { desc = 'Flutter Outline Tree' })
+
+

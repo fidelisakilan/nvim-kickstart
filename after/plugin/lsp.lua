@@ -173,7 +173,7 @@ require("flutter-tools").setup {
   fvm = true,
   lsp = {
     on_attach = on_attach,
-    color = { enabled = false },
+    color = { enabled = true },
     settings = {
       showTodos = true,
       completeFunctionCalls = true,

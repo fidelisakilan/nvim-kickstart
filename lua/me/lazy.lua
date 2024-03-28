@@ -153,18 +153,13 @@ require('lazy').setup({
       end,
     },
   },
-
   {
     'catppuccin/nvim',
     priority = 1000,
     config = function()
-      require("catppuccin").setup({
-        transparent_background = true,
-      })
       vim.cmd.colorscheme 'catppuccin-mocha'
     end,
   },
-
   {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
