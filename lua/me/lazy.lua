@@ -157,6 +157,14 @@ require('lazy').setup({
     'catppuccin/nvim',
     priority = 1000,
     config = function()
+      require('catppuccin').setup({
+        no_bold = true,
+        flavour = "mocha",
+        background = {
+          light = "latte",
+          dark = "mocha",
+        },
+      })
       vim.cmd.colorscheme 'catppuccin-mocha'
     end,
   },
@@ -288,4 +296,5 @@ require('lazy').setup({
   },
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
+  { 'sindrets/diffview.nvim' },
 })
