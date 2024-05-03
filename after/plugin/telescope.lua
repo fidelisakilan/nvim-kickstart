@@ -4,18 +4,27 @@ require('telescope').setup {
   defaults = {
     layout_strategy = "vertical",
     sorting_strategy = "ascending",
+    layout_config = {
+      vertical = {
+        preview_cutoff = 0,
+      },
+    },
     mappings = {
       i = {
         ['<C-u>'] = false,
         ['<C-d>'] = false,
       },
     },
+    pickers = {
+      find_files = {
+        find_command = { 'rg', '--files', '--iglob', '!.git', '--hidden' },
+      }
+    },
   },
 }
 
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
-
 
 -- Telescope live_grep in git root
 -- Function to find the git root directory based on the current buffer's path
@@ -64,12 +73,6 @@ vim.keymap.set('n', '<leader>/', function()
   })
 end, { desc = '[/] Fuzzily search in current buffer' })
 
-local function telescope_live_grep_open_files()
-  require('telescope.builtin').live_grep {
-    grep_open_files = true,
-    prompt_title = 'Live Grep in Open Files',
-  }
-end
 local builtin = require 'telescope.builtin'
 vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
 vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
