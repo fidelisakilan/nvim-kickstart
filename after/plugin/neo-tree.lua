@@ -41,7 +41,7 @@ require("neo-tree").setup({
         --".gitignored",
       },
       never_show = { -- remains hidden even if visible is toggled to true, this overrides always_show
-        --".DS_Store",
+        ".DS_Store",
         --"thumbs.db"
       },
       never_show_by_pattern = { -- uses glob style patterns
@@ -53,11 +53,10 @@ require("neo-tree").setup({
       leave_dirs_open = false,              -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
     },
     group_empty_dirs = false,               -- when true, empty folders will be grouped together
-    hijack_netrw_behavior = "disabled", -- netrw disabled, opening a directory opens neo-tree
+    hijack_netrw_behavior = "disabled",
     -- in whatever position is specified in window.position
     -- "open_current",  -- netrw disabled, opening a directory opens within the
     -- window like netrw would, regardless of window.position
-    -- "disabled",    -- netrw left alone, neo-tree does not handle opening dirs
   },
   buffers = {
     follow_current_file = {

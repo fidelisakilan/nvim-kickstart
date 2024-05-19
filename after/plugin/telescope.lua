@@ -15,11 +15,6 @@ require('telescope').setup {
         ['<C-d>'] = false,
       },
     },
-    pickers = {
-      find_files = {
-        find_command = { 'rg', '--files', '--iglob', '!.git', '--hidden' },
-      }
-    },
   },
 }
 
