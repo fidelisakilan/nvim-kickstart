@@ -5,5 +5,6 @@ vim.keymap.set('n', '<leader>mR', vim.cmd.FlutterRestart, { desc = 'Flutter Rest
 vim.keymap.set('n', '<leader>mq', vim.cmd.FlutterQuit, { desc = 'Flutter Quit' })
 vim.keymap.set('n', '<leader>mo', vim.cmd.FlutterQuit, { desc = 'Flutter Rename' })
 vim.keymap.set('n', '<leader>mt', vim.cmd.FlutterOutlineToggle, { desc = 'Flutter Outline Tree' })
+vim.keymap.set('n', '<leader>me', vim.cmd.FlutterEmulators, { desc = 'Flutter Emulators' })
 
 
