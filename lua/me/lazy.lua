@@ -159,14 +159,22 @@ require('lazy').setup({
     config = function()
       require('catppuccin').setup({
         flavour = "auto", -- latte, frappe, macchiato, mocha
-        background = { -- :h background
+        background = {    -- :h background
           light = "latte",
           dark = "mocha",
         },
+        transparent_background = false,
       })
       vim.cmd.colorscheme 'catppuccin'
     end,
   },
+  -- {
+  --   'rose-pine/neovim',
+  --   priority = 1000,
+  --   config = function()
+  --     vim.cmd.colorscheme 'rose-pine'
+  --   end,
+  -- },
   {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
@@ -178,10 +186,10 @@ require('lazy').setup({
         component_separators = '|',
         section_separators = '',
         disabled_filetypes = { 'neo-tree' },
+
       }
     },
   },
-
   {
     -- Add indentation guides even on blank lines
     'lukas-reineke/indent-blankline.nvim',
@@ -251,7 +259,6 @@ require('lazy').setup({
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
-      "3rd/image.nvim",              -- Optional image support in preview window: See `# Preview Mode` for more information
       {
         's1n7ax/nvim-window-picker',
         version = '2.*',
